@@ -1,0 +1,46 @@
+<section class="row mt-5">
+    <div class="col">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Ingredientes</th>
+            <th scope="col">Calidad</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pizza of pizzas; index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{pizza.nombre}}</td>
+            <td>{{pizza.ingredientes}}</td>
+            <td>{{pizza.calidad}}</td>
+            <td>{{pizza.precio}}</td>
+            <td>
+              <button class="btn btn-primary" (click)="onFormularioUpdatePizza(pizza.id)">Update</button>
+            </td>
+            <td>Doble click</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <div class="ex1">
+      <h4 class="titulo">NUEVA PIZZA</h4>
+      <div>
+        <label>Nombre:
+          <input [(ngModel)]="pizza.nombre"/>
+        </label><br>
+        <label>Ingredientes:
+          <input [(ngModel)]="pizza.ingredientes"/>
+        </label><br>
+        <label>Calidad:
+          <input [(ngModel)]="pizza.calidad" />
+        </label><br>
+        <label>Precio:
+            <input [(ngModel)]="pizza.precio"/>
+        </label><br>
+      </div>
+      <button (click)="modificarPizza()">Modificar</button>
+  </div>

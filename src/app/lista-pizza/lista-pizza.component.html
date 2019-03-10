@@ -1,0 +1,28 @@
+<section id="pizzas" class="ex1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let pizza of pizzas">
+        <div class="card_pizza">
+          <div class="card">
+            <div class="card-body text-center">
+              <h4 class="card-title">{{pizza.nombre}}</h4>
+              <p class="card-text">
+                {{pizza.ingredientes }}
+              </p>
+              <p>
+                {{pizza.calidad}}
+              </p>
+              <div class="container-precio">
+                <p class="badge badge-info">
+                  {{pizza.precio}}€
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

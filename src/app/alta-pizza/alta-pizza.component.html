@@ -1,0 +1,18 @@
+<div class="ex1">
+    <h4 class="titulo">NUEVA PIZZA</h4>
+    <div>
+      <label>Nombre:
+        <input [(ngModel)]="pizza.nombre"/>
+      </label><br>
+      <label>Ingredientes:
+        <input [(ngModel)]="pizza.ingredientes"/>
+      </label><br>
+      <label>Calidad:
+        <input [(ngModel)]="pizza.calidad" />
+      </label><br>
+      <label>Precio:
+          <input [(ngModel)]="pizza.precio"/>
+      </label><br>
+    </div>
+    <button (click)="addPizza()">AÑADIR</button>
+</div>

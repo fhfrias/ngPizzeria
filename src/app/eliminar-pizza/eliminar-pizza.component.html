@@ -1,0 +1,27 @@
+<section class="row mt-5">
+    <div class="col">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Ingredientes</th>
+            <th scope="col">Calidad</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pizza of pizzas; index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{pizza.nombre}}</td>
+            <td>{{pizza.ingredientes}}</td>
+            <td>{{pizza.calidad}}</td>
+            <td>{{pizza.precio}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="onDeletePizza(pizza.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
